@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         forceCoversAnnotation="true"
+         beStrictAboutCoversAnnotation="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         verbose="true">
+    <testsuites>
+        <testsuite name="default">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+        <testsuite name="Garage">
+            <directory suffix="Test.php">src/Context/Garage/Infrastructure/Test</directory>
+        </testsuite>
+        <testsuite name="Fuel">
+            <directory suffix="Test.php">src/Context/Fuel/Infrastructure/Test</directory>
+        </testsuite>
+        <testsuite name="Cargo">
+            <directory suffix="Test.php">src/Context/Cargo/Infrastructure/Test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <server name="KERNEL_CLASS" value="App\Kernel" />
+    </php>
+</phpunit>

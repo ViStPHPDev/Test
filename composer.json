@@ -1,0 +1,36 @@
+{
+    "name": "vist/test.garage",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vitaly Stepanenko",
+            "email": "vist.prim@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/skeleton": "dev-master",
+        "symfony/dotenv": "^4.2@dev",
+        "symfony/browser-kit": "^4.2@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src",
+            "App\\Garage\\": "src/Context/Garage",
+            "App\\Fuel\\": "src/Context/Fuel",
+            "App\\Cargo\\": "src/Context/Cargo",
+            "App\\Test\\": "tests"
+        }
+    },
+    "require-dev": {
+        "symfony/console": "^4.2@dev",
+        "symfony/web-server-bundle": "^4.2@dev",
+        "symfony/phpunit-bridge": "^4.2@dev"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+}
